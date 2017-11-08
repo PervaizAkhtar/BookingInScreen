@@ -33,21 +33,22 @@ namespace DXListView
             // Represents the root of the tree. 
             MyData tlDataSource = new MyData(null, null);
             // Represents the first root node. 
-            MyData rootNode1 = new MyData(tlDataSource, new string[] { "Project A", "High" });
-            MyData node1 = new MyData(rootNode1, new string[] { "Deliverable 1", "Normal" });
-            MyData node2 = new MyData(node1, new string[] { "This task is mine A", "High" });
-            MyData node3 = new MyData(node1, new string[] { "This task isn't mine A", "Low" });
-            // Represents the second root node. 
-            MyData rootNode2 = new MyData(tlDataSource, new string[] { "Project B", "Normal" });
-            // Represents the child node of the second root node. 
-            MyData node5 = new MyData(rootNode2, new string[] { "This task is mine B", "High" });
+            MyData rootNode1 = new MyData(tlDataSource, new string[] { "Root Object", "High" });
+            MyData node1 = new MyData(rootNode1, new string[] { "Shirt", "Normal" });
+            MyData node2 = new MyData(node1, new string[] { "Grey", "High" });
+            MyData node3 = new MyData(node1, new string[] { "Linen", "Low" });
+            MyData node4 = new MyData(node1, new string[] { "Silk", "Low" });
+            
+            
             TreeListColumn col1 = new TreeListColumn();
             col1.Caption = "Name";
             col1.VisibleIndex = 0;
+
             TreeListColumn col2 = new TreeListColumn();
             col2.Caption = "Priority";
             col2.VisibleIndex = 1;
             col2.Width = 40;
+
             treeList1.Columns.AddRange(new TreeListColumn[] { col1, col2 });
             treeList1.DataSource = tlDataSource;
 
@@ -63,6 +64,16 @@ namespace DXListView
         {
             Form1 frm = new Form1();
             frm.ShowDialog(); 
+        }
+
+        private void treeList1_AfterExpand(object sender, NodeEventArgs e)
+        {
+            e.Node.StateImageIndex = 0;
+        }
+
+        private void treeList1_AfterCollapse(object sender, NodeEventArgs e)
+        {
+            e.Node.StateImageIndex = 1;
         }
     }
 

@@ -47,7 +47,12 @@
             // 
             // treeList1
             // 
+            this.treeList1.Appearance.TreeLine.BackColor = System.Drawing.Color.Red;
+            this.treeList1.Appearance.TreeLine.Options.UseBackColor = true;
+            this.treeList1.AppearancePrint.Row.Image = global::DXListView.Properties.Resources.Customers_Ticket;
+            this.treeList1.AppearancePrint.Row.Options.UseImage = true;
             this.treeList1.BackgroundImage = global::DXListView.Properties.Resources.Customers_Ticket;
+            this.treeList1.BestFitVisibleOnly = true;
             this.treeList1.Location = new System.Drawing.Point(432, 12);
             this.treeList1.Name = "treeList1";
             this.treeList1.Size = new System.Drawing.Size(356, 514);
@@ -63,6 +68,7 @@
             this.Controls.Add(this.btnVOID);
             this.Controls.Add(this.treeList1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tree View Test 1";
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             this.ResumeLayout(false);
