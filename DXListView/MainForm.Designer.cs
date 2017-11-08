@@ -58,10 +58,10 @@
             this.button20 = new System.Windows.Forms.Button();
             this.panelColor = new System.Windows.Forms.Panel();
             this.panelFabric = new System.Windows.Forms.Panel();
-            this.button22 = new System.Windows.Forms.Button();
             this.panelPlu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.lblTicketTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nORTHWINDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
@@ -87,7 +87,7 @@
             // treeList1
             // 
             this.treeList1.BackgroundImage = global::DXListView.Properties.Resources.Customers_Ticket;
-            this.treeList1.Location = new System.Drawing.Point(432, 38);
+            this.treeList1.Location = new System.Drawing.Point(433, 59);
             this.treeList1.Name = "treeList1";
             this.treeList1.Size = new System.Drawing.Size(356, 514);
             this.treeList1.TabIndex = 0;
@@ -99,7 +99,7 @@
             this.btnVOID.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVOID.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnVOID.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVOID.Location = new System.Drawing.Point(715, 555);
+            this.btnVOID.Location = new System.Drawing.Point(715, 575);
             this.btnVOID.Name = "btnVOID";
             this.btnVOID.Size = new System.Drawing.Size(74, 48);
             this.btnVOID.TabIndex = 59;
@@ -111,7 +111,7 @@
             this.lblQty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblQty.Font = new System.Drawing.Font("Courier New", 11.5F);
             this.lblQty.ForeColor = System.Drawing.Color.Black;
-            this.lblQty.Location = new System.Drawing.Point(703, -1);
+            this.lblQty.Location = new System.Drawing.Point(703, 9);
             this.lblQty.Name = "lblQty";
             this.lblQty.Size = new System.Drawing.Size(86, 24);
             this.lblQty.TabIndex = 66;
@@ -370,18 +370,6 @@
             this.panelFabric.TabIndex = 89;
             this.panelFabric.Visible = false;
             // 
-            // button22
-            // 
-            this.button22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(4, 556);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(74, 48);
-            this.button22.TabIndex = 91;
-            this.button22.Text = "TEST 1";
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
             // panelPlu
             // 
             this.panelPlu.Controls.Add(this.button7);
@@ -402,7 +390,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(436, 3);
+            this.label1.Location = new System.Drawing.Point(436, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 24);
             this.label1.TabIndex = 94;
@@ -413,24 +401,36 @@
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(432, 556);
+            this.button8.Location = new System.Drawing.Point(432, 576);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(74, 48);
             this.button8.TabIndex = 95;
             this.button8.Text = "NEXT ITEM";
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // lblTicketTotal
+            // 
+            this.lblTicketTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTicketTotal.Font = new System.Drawing.Font("Courier New", 11.5F);
+            this.lblTicketTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTicketTotal.Location = new System.Drawing.Point(702, 36);
+            this.lblTicketTotal.Name = "lblTicketTotal";
+            this.lblTicketTotal.Size = new System.Drawing.Size(86, 24);
+            this.lblTicketTotal.TabIndex = 96;
+            this.lblTicketTotal.Text = "Total";
+            this.lblTicketTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(225)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(800, 603);
+            this.ClientSize = new System.Drawing.Size(800, 623);
             this.ControlBox = false;
+            this.Controls.Add(this.lblTicketTotal);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelPlu);
-            this.Controls.Add(this.button22);
             this.Controls.Add(this.panelFabric);
             this.Controls.Add(this.panelColor);
             this.Controls.Add(this.lblQty);
@@ -485,9 +485,9 @@
         internal System.Windows.Forms.Button button20;
         private System.Windows.Forms.Panel panelColor;
         private System.Windows.Forms.Panel panelFabric;
-        internal System.Windows.Forms.Button button22;
         private System.Windows.Forms.Panel panelPlu;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Button button8;
+        internal System.Windows.Forms.Label lblTicketTotal;
     }
 }
