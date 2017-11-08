@@ -17,7 +17,7 @@ namespace DXListView
     public partial class MainForm : Form
     {
         public DevExpressTreeListManager mgr;
-        public string CustomerAccNo="For MR Z ERO";
+        public string CustomerAccNo = "For MR Z ERO";
         public TreeListNode NodePlu = null;
 
         public MainForm()
@@ -43,7 +43,7 @@ namespace DXListView
             button18.Click += Button_Click;
             button19.Click += Button_Click;
             button20.Click += Button_Click;
-            
+
         }
 
         void Button_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace DXListView
                 case "button6":
                     AddPluToTree("", btn.Text, btn.Tag.ToString());
                     break;
-                
+
                 case "button9":
                 case "button10":
                 case "button11":
@@ -76,7 +76,7 @@ namespace DXListView
                     break;
 
             }
-            
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -90,12 +90,6 @@ namespace DXListView
             this.Close();
         }
 
-        private void button22_Click(object sender, EventArgs e)
-        {
-            Form1 frm = new Form1();
-            frm.ShowDialog(); 
-        }
-
         private void treeList1_AfterExpand(object sender, NodeEventArgs e)
         {
             e.Node.StateImageIndex = 0;
@@ -107,8 +101,8 @@ namespace DXListView
         }
 
         private void AddPluToTree(string quantity, string pluText, string pluPrice)
-        { 
-            if(!string.IsNullOrEmpty(quantity))
+        {
+            if (!string.IsNullOrEmpty(quantity))
             {
                 pluText = quantity + " x " + pluText;
             }
@@ -144,90 +138,11 @@ namespace DXListView
             panelFabric.Visible = true;
         }
 
-
         private void button8_Click(object sender, EventArgs e)
         {
             panelPlu.Visible = true;
             panelColor.Visible = false;
             panelFabric.Visible = false;
         }
-
- 
-      
-
-
-#if false 
-
-        void InitData()
-        {
-            // Represents the root of the tree. 
-            MyData tlDataSource = new MyData(null, null);
-            // Represents the first root node. 
-            MyData rootNode1 = new MyData(tlDataSource, new string[] { "Root Object", "High" });
-            MyData node1 = new MyData(rootNode1, new string[] { "Shirt", "Normal" });
-            MyData node2 = new MyData(node1, new string[] { "Grey", "High" });
-            MyData node3 = new MyData(node1, new string[] { "Linen", "Low" });
-            MyData node4 = new MyData(node1, new string[] { "Silk", "Low" });
-            
-            
-            TreeListColumn col1 = new TreeListColumn();
-            col1.Caption = "Name";
-            col1.VisibleIndex = 0;
-
-            TreeListColumn col2 = new TreeListColumn();
-            col2.Caption = "Priority";
-            col2.VisibleIndex = 1;
-            col2.Width = 40;
-
-            treeList1.Columns.AddRange(new TreeListColumn[] { col1, col2 });
-            treeList1.DataSource = tlDataSource;
-
-            treeList1.BackgroundImage = Image.FromFile(@"C:\Users\PervaizA.BUZZ\Documents\visual studio 2013\Projects\DXListView\DXListView\Resources\Customers Ticket.jpg");
-        }
-
-#endif
-
     }
-
-#if false 
-
-    // Represents a sample Business Object 
-    public class MyData : TreeList.IVirtualTreeListData
-    {
-        protected MyData parentCore;
-        protected ArrayList childrenCore = new ArrayList();
-        protected object[] cellsCore;
-
-        public MyData(MyData parent, object[] cells)
-        {
-            // Specifies the parent node for the new node. 
-            this.parentCore = parent;
-            // Provides data for the node's cell. 
-            this.cellsCore = cells;
-
-            if (this.parentCore != null)
-            {
-                this.parentCore.childrenCore.Add(this);
-            }
-        }
-
-        void TreeList.IVirtualTreeListData.VirtualTreeGetChildNodes(VirtualTreeGetChildNodesInfo info)
-        {
-            info.Children = childrenCore;
-        }
-
-        void TreeList.IVirtualTreeListData.VirtualTreeGetCellValue(VirtualTreeGetCellValueInfo info)
-        {
-            info.CellData = cellsCore[info.Column.AbsoluteIndex];
-        }
-
-        void TreeList.IVirtualTreeListData.VirtualTreeSetCellValue(VirtualTreeSetCellValueInfo info)
-        {
-            cellsCore[info.Column.AbsoluteIndex] = info.NewCellData;
-        }
-
-    }
-
-#endif
-
 }
