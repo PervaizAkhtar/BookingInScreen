@@ -342,6 +342,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(225)))), ((int)(((byte)(247)))));
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.button12);
@@ -355,7 +356,7 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(225)))), ((int)(((byte)(247)))));
             this.panel2.Controls.Add(this.button15);
             this.panel2.Controls.Add(this.button16);
             this.panel2.Controls.Add(this.button17);
@@ -385,6 +386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(225)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(800, 603);
+            this.ControlBox = false;
             this.Controls.Add(this.button21);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -401,10 +403,12 @@
             this.Controls.Add(this.lblHeading);
             this.Controls.Add(this.btnVOID);
             this.Controls.Add(this.treeList1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.ShowInTaskbar = false;
             this.Text = "Booking In Screen";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nORTHWINDDataSet)).EndInit();
