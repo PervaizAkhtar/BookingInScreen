@@ -47,13 +47,22 @@ namespace DXListView
             TreeListColumn col2 = new TreeListColumn();
             col2.Caption = "Priority";
             col2.VisibleIndex = 1;
+            col2.Width = 40;
             treeList1.Columns.AddRange(new TreeListColumn[] { col1, col2 });
             treeList1.DataSource = tlDataSource;
+
+            treeList1.BackgroundImage = Image.FromFile(@"C:\Users\PervaizA.BUZZ\Documents\visual studio 2013\Projects\DXListView\DXListView\Resources\Customers Ticket.jpg");
         }
 
         private void btnVOID_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.ShowDialog(); 
         }
     }
 

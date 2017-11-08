@@ -61,6 +61,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nORTHWINDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
@@ -363,7 +365,7 @@
             this.panel2.Controls.Add(this.button18);
             this.panel2.Controls.Add(this.button19);
             this.panel2.Controls.Add(this.button20);
-            this.panel2.Location = new System.Drawing.Point(7, 439);
+            this.panel2.Location = new System.Drawing.Point(8, 401);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(394, 150);
             this.panel2.TabIndex = 89;
@@ -380,6 +382,29 @@
             this.button21.Text = "4";
             this.button21.UseVisualStyleBackColor = false;
             // 
+            // button22
+            // 
+            this.button22.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(4, 556);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(74, 48);
+            this.button22.TabIndex = 91;
+            this.button22.Text = "TEST 1";
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button23
+            // 
+            this.button23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button23.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.Location = new System.Drawing.Point(82, 556);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(74, 48);
+            this.button23.TabIndex = 92;
+            this.button23.Text = "TEST 2";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +412,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(225)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(800, 603);
             this.ControlBox = false;
+            this.Controls.Add(this.button23);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -453,5 +480,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Button button21;
+        internal System.Windows.Forms.Button button22;
+        internal System.Windows.Forms.Button button23;
     }
 }
