@@ -18,6 +18,7 @@ namespace DXListView
     {
         public DevExpressTreeListManager mgr;
         public string CustomerAccNo = "For MR Z ERO";
+        public int Qty = 1;
         public TreeListNode NodePlu = null;
 
         public MainForm()
@@ -57,7 +58,7 @@ namespace DXListView
                 case "button4":
                 case "button5":
                 case "button6":
-                    AddPluToTree("", btn.Text, btn.Tag.ToString());
+                    AddPluToTree(btn.Text, btn.Tag.ToString());
                     break;
 
                 case "button9":
@@ -100,18 +101,13 @@ namespace DXListView
             e.Node.StateImageIndex = 1;
         }
 
-        private void AddPluToTree(string quantity, string pluText, string pluPrice)
+        private void AddPluToTree(string pluText, string pluPrice)
         {
-            if (!string.IsNullOrEmpty(quantity))
-            {
-                pluText = quantity + " x " + pluText;
-            }
-            else
-            {
-                pluText = "1" + " x " + pluText;
-            }
+            pluText = Qty + " x " + pluText;
 
-            decimal price = Decimal.Parse(pluPrice.ToString());
+            decimal   price = decimal.Parse(pluPrice.ToString());
+
+            price *= Qty;
 
             NodePlu = mgr.CreatePLUNode(CustomerAccNo, pluText, price);
 
@@ -120,12 +116,13 @@ namespace DXListView
             treeList1.ExpandAll();
 
             panelPlu.Visible = false;
+
             panelColor.Visible = true;
         }
 
         public void AddPLUExtraToTree(string pluExtraText, string pluExtraPrice)
         {
-            decimal price = Decimal.Parse(pluExtraPrice.ToString());
+            decimal price = decimal.Parse(pluExtraPrice.ToString());
 
             mgr.CreatePLUNodeExtra(NodePlu, pluExtraText, price);
 
@@ -143,6 +140,17 @@ namespace DXListView
             panelPlu.Visible = true;
             panelColor.Visible = false;
             panelFabric.Visible = false;
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            lblQty.Text = "Qty: 2";
+            Qty = 2;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            lblQty.Text = "Qty: 1";
         }
     }
 }

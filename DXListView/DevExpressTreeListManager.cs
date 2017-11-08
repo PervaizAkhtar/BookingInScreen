@@ -11,13 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class PluExtra
-{
-    public string Description { get; set; }
-
-    public decimal Price { get; set; }
-}
-
 public class DevExpressTreeListManager
 {
     private TreeList tl;
@@ -58,7 +51,7 @@ public class DevExpressTreeListManager
         return nodeCustomerAccNo;
     }
 
-    public  TreeListNode CreatePLUNode(string customerAccNo,string pluDescription,decimal pluPrice)
+    public TreeListNode CreatePLUNode(string customerAccNo, string pluDescription, decimal pluPrice)
     {
         TreeListNode nodeCustomerAccNo = CreateRootNodeWithCustomerAccountNumber(customerAccNo);
 
