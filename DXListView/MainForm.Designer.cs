@@ -88,18 +88,15 @@
             // 
             this.treeList1.Appearance.Row.Font = new System.Drawing.Font("Courier New", 11.5F);
             this.treeList1.Appearance.Row.Options.UseFont = true;
-            this.treeList1.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.treeList1.Appearance.SelectedRow.Options.UseBackColor = true;
             this.treeList1.BackgroundImage = global::DXListView.Properties.Resources.Customers_Ticket;
             this.treeList1.CausesValidation = false;
-            this.treeList1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeList1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeList1.Location = new System.Drawing.Point(433, 60);
             this.treeList1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.treeList1.LookAndFeel.TouchUI = true;
             this.treeList1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.treeList1.Margin = new System.Windows.Forms.Padding(6);
             this.treeList1.Name = "treeList1";
-            this.treeList1.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowOnlyInEditor;
             this.treeList1.Size = new System.Drawing.Size(356, 514);
             this.treeList1.TabIndex = 0;
             this.treeList1.AfterExpand += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterExpand);
