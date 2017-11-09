@@ -25,22 +25,31 @@ public class DevExpressTreeListManager
     {
         tl.BeginUpdate();
         TreeListColumn col1 = tl.Columns.Add();
-        col1.Caption = "Description";
+        col1.Caption = "";
+        col1.OptionsColumn.AllowSort = false;
+        col1.OptionsColumn.AllowMoveToCustomizationForm = false;
+        col1.OptionsColumn.AllowMove = false;
         col1.VisibleIndex = 0;
         col1.MinWidth = 270;
         col1.Width = 270;
-
+        col1.AppearanceHeader.BackColor = Color.White;
+        col1.AppearanceCell.BackColor = Color.White;
 
         TreeListColumn col2 = tl.Columns.Add();
-        col2.Caption = "Price";
+        col2.Caption = "";
         col2.VisibleIndex = 1;
         col2.MinWidth = 50;
         col2.Width = 50;
+        col2.OptionsColumn.AllowSort = false;
+        col2.OptionsColumn.AllowMoveToCustomizationForm = false;
+        col2.OptionsColumn.AllowMove = false;
+        col2.AppearanceHeader.BackColor = Color.White;
+        col2.AppearanceCell.BackColor = Color.White;
 
         tl.EndUpdate();
     }
 
-    private TreeListNode CreateRootNodeWithCustomerAccountNumber(string customerAccNo)
+    public  TreeListNode CreateRootNodeWithCustomerAccountNumber(string customerAccNo)
     {
         // Create a root node .
         TreeListNode parentForRootNodes = null;
@@ -51,9 +60,8 @@ public class DevExpressTreeListManager
         return nodeCustomerAccNo;
     }
 
-    public TreeListNode CreatePLUNode(string customerAccNo, string pluDescription, decimal pluPrice)
+    public TreeListNode CreatePLUNode(TreeListNode nodeCustomerAccNo, string pluDescription, decimal pluPrice)
     {
-        TreeListNode nodeCustomerAccNo = CreateRootNodeWithCustomerAccountNumber(customerAccNo);
 
         TreeListNode nodePLU = tl.AppendNode(
         new object[] { pluDescription, pluPrice }, nodeCustomerAccNo);

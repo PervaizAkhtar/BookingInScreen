@@ -20,6 +20,7 @@ namespace DXListView
         public string CustomerAccNo = "For MR Z ERO";
         public int Qty = 1;
         public TreeListNode NodePlu = null;
+        public TreeListNode NodeCustomerAccNo = null;
 
         public MainForm()
         {
@@ -84,6 +85,7 @@ namespace DXListView
         {
             // TODO: This line of code loads data into the 'nORTHWINDDataSet.Orders' table. You can move, or remove it, as needed.
             this.ordersTableAdapter.Fill(this.nORTHWINDDataSet.Orders);
+            NodeCustomerAccNo = mgr.CreateRootNodeWithCustomerAccountNumber(CustomerAccNo);
         }
 
         private void btnVOID_Click(object sender, EventArgs e)
@@ -109,7 +111,7 @@ namespace DXListView
 
             price *= Qty;
 
-            NodePlu = mgr.CreatePLUNode(CustomerAccNo, pluText, price);
+            NodePlu = mgr.CreatePLUNode(NodeCustomerAccNo, pluText, price);
 
             treeList1.EndUnboundLoad();
 
@@ -131,7 +133,9 @@ namespace DXListView
             treeList1.ExpandAll();
 
             panelPlu.Visible = false;
+
             panelColor.Visible = false;
+
             panelFabric.Visible = true;
         }
 
