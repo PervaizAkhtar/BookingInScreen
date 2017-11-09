@@ -62,6 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.lblTicketTotal = new System.Windows.Forms.Label();
+            this.button21 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nORTHWINDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
@@ -107,7 +108,6 @@
             this.treeList1.VertScrollVisibility = DevExpress.XtraTreeList.ScrollVisibility.Never;
             this.treeList1.AfterExpand += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterExpand);
             this.treeList1.AfterCollapse += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterCollapse);
-            this.treeList1.Click += new System.EventHandler(this.treeList1_Click);
             // 
             // btnVOID
             // 
@@ -437,6 +437,18 @@
             this.lblTicketTotal.Text = "Total";
             this.lblTicketTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // button21
+            // 
+            this.button21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button21.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(512, 576);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(74, 48);
+            this.button21.TabIndex = 97;
+            this.button21.Text = "RESET";
+            this.button21.Click += new System.EventHandler(this.button21_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,6 +456,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(225)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(800, 623);
             this.ControlBox = false;
+            this.Controls.Add(this.button21);
             this.Controls.Add(this.lblTicketTotal);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
@@ -506,5 +519,6 @@
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Button button8;
         internal System.Windows.Forms.Label lblTicketTotal;
+        internal System.Windows.Forms.Button button21;
     }
 }

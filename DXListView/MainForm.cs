@@ -113,7 +113,7 @@ namespace DXListView
 
             price *= Qty;
 
-            NodePlu = mgr.CreatePLUNode(NodeCustomerAccNo, pluText, price);
+            NodePlu = mgr.CreatePLUNode(pluText, price);
 
             treeList1.EndUnboundLoad();
 
@@ -188,24 +188,11 @@ namespace DXListView
 
         }
 
-        private void treeList1_Click(object sender, EventArgs e)
-        {
-            //var objSender = sender as TreeList;
-            /////objSender.OptionsSelection.MultiSelect = true;
 
-            //if (objSender.Focused)
-            //{
-            //    objSender.Appearance.FocusedCell.BackColor = Color.Blue;
-            //    objSender.Appearance.FocusedCell.ForeColor = Color.White;
-                
-            //}
-            //else
-            //{
-                
-            //    objSender.Appearance.FocusedCell.BackColor = Color.Transparent;
-            //    objSender.Appearance.FocusedCell.ForeColor = Color.Transparent;
-            //}
-            
+        private void button21_Click_1(object sender, EventArgs e)
+        {
+            Qty = 1;
+            treeList1.Nodes.Clear();
             
         }
     }

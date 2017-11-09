@@ -32,18 +32,18 @@ public class DevExpressTreeListManager
         col1.VisibleIndex = 0;
         col1.MinWidth = 240;
         col1.Width = 240;
-        col1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;  
-        
+        col1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
 
-        //TreeListColumn col2 = tl.Columns.Add();
-        //col2.Caption = "";
-        //col2.VisibleIndex = 1;
-        //col2.MinWidth = 80;
-        //col2.Width = 80;
-        //col2.OptionsColumn.AllowSort = false;
-        //col2.OptionsColumn.AllowMoveToCustomizationForm = false;
-        //col2.OptionsColumn.AllowMove = false;
-        //col2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+
+        TreeListColumn col2 = tl.Columns.Add();
+        col2.Caption = "";
+        col2.VisibleIndex = 1;
+        col2.MinWidth = 80;
+        col2.Width = 80;
+        col2.OptionsColumn.AllowSort = false;
+        col2.OptionsColumn.AllowMoveToCustomizationForm = false;
+        col2.OptionsColumn.AllowMove = false;
+        col2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
         
 
         tl.EndUpdate();
@@ -61,18 +61,19 @@ public class DevExpressTreeListManager
         return nodeCustomerAccNo;
     }
 
-    public TreeListNode CreatePLUNode(TreeListNode nodeCustomerAccNo, string pluDescription, decimal pluPrice)
+    public TreeListNode CreatePLUNode(string pluDescription, decimal pluPrice)
     {
+        TreeListNode parentForPluNodes = null;
 
         TreeListNode nodePLU = tl.AppendNode(
-        new object[] { pluDescription + "         " + pluPrice }, nodeCustomerAccNo);
+        new object[] { pluDescription,pluPrice }, parentForPluNodes);
 
         return nodePLU;
     }
 
     public TreeListNode CreatePLUNodeExtra(TreeListNode nodePLU, string pluExtraDescription, decimal pluExtraPrice)
     {
-         TreeListNode nodePluExtra = tl.AppendNode(new object[] { pluExtraDescription +"         "+ pluExtraPrice }, nodePLU);
+        TreeListNode nodePluExtra = tl.AppendNode(new object[] { pluExtraDescription,pluExtraPrice }, nodePLU);
 
         //tl.AppendNode("", nodePLU);
 
