@@ -86,9 +86,20 @@
             // 
             // treeList1
             // 
+            this.treeList1.Appearance.Row.Font = new System.Drawing.Font("Courier New", 11.5F);
+            this.treeList1.Appearance.Row.Options.UseFont = true;
+            this.treeList1.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.treeList1.Appearance.SelectedRow.Options.UseBackColor = true;
             this.treeList1.BackgroundImage = global::DXListView.Properties.Resources.Customers_Ticket;
+            this.treeList1.CausesValidation = false;
+            this.treeList1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeList1.Location = new System.Drawing.Point(433, 60);
+            this.treeList1.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.treeList1.LookAndFeel.TouchUI = true;
+            this.treeList1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.treeList1.Margin = new System.Windows.Forms.Padding(6);
             this.treeList1.Name = "treeList1";
+            this.treeList1.ShowButtonMode = DevExpress.XtraTreeList.ShowButtonModeEnum.ShowOnlyInEditor;
             this.treeList1.Size = new System.Drawing.Size(356, 514);
             this.treeList1.TabIndex = 0;
             this.treeList1.AfterExpand += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterExpand);
@@ -170,7 +181,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 48);
             this.button5.TabIndex = 71;
-            this.button5.Tag = "15.50";
+            this.button5.Tag = "100.50";
             this.button5.Text = "3 Piece Suit";
             // 
             // button6
@@ -229,7 +240,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(96, 48);
             this.button10.TabIndex = 77;
-            this.button10.Tag = "0.50";
+            this.button10.Tag = "10.50";
             this.button10.Text = "Lt. Grey";
             // 
             // button11

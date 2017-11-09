@@ -30,21 +30,23 @@ public class DevExpressTreeListManager
         col1.OptionsColumn.AllowMoveToCustomizationForm = false;
         col1.OptionsColumn.AllowMove = false;
         col1.VisibleIndex = 0;
-        col1.MinWidth = 270;
-        col1.Width = 270;
-        col1.AppearanceHeader.BackColor = Color.White;
-        col1.AppearanceCell.BackColor = Color.White;
+        col1.MinWidth = 240;
+        col1.Width = 240;
+        
+        //col1.AppearanceHeader.BackColor = Color.White;
+        //col1.AppearanceCell.BackColor = Color.White;
 
         TreeListColumn col2 = tl.Columns.Add();
         col2.Caption = "";
         col2.VisibleIndex = 1;
-        col2.MinWidth = 50;
-        col2.Width = 50;
+        col2.MinWidth = 80;
+        col2.Width = 80;
         col2.OptionsColumn.AllowSort = false;
         col2.OptionsColumn.AllowMoveToCustomizationForm = false;
         col2.OptionsColumn.AllowMove = false;
-        col2.AppearanceHeader.BackColor = Color.White;
-        col2.AppearanceCell.BackColor = Color.White;
+        
+        //col2.AppearanceHeader.BackColor = Color.White;
+        //col2.AppearanceCell.BackColor = Color.White;
 
         tl.EndUpdate();
     }
