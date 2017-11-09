@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,7 +94,8 @@ namespace DXListView
             treeList1.OptionsView.ShowVertLines = false;
             treeList1.OptionsView.ShowHorzLines = false;
             treeList1.OptionsView.ShowColumns = false;
-    
+
+            
         }
 
         private void btnVOID_Click(object sender, EventArgs e)
@@ -101,15 +103,7 @@ namespace DXListView
             this.Close();
         }
 
-        private void treeList1_AfterExpand(object sender, NodeEventArgs e)
-        {
-            e.Node.StateImageIndex = 0;
-        }
-
-        private void treeList1_AfterCollapse(object sender, NodeEventArgs e)
-        {
-            e.Node.StateImageIndex = 1;
-        }
+    
 
         private void AddPluToTree(string pluText, string pluPrice)
         {
@@ -179,6 +173,40 @@ namespace DXListView
             treeList1.OptionsView.ShowVertLines = false;
             treeList1.OptionsView.ShowHorzLines = false;
             treeList1.OptionsView.ShowColumns = false;
+        }
+
+
+        private void treeList1_AfterExpand(object sender, NodeEventArgs e)
+        {
+            e.Node.StateImageIndex = 0;
+
+        }
+
+        private void treeList1_AfterCollapse(object sender, NodeEventArgs e)
+        {
+            e.Node.StateImageIndex = 1;
+
+        }
+
+        private void treeList1_Click(object sender, EventArgs e)
+        {
+            //var objSender = sender as TreeList;
+            /////objSender.OptionsSelection.MultiSelect = true;
+
+            //if (objSender.Focused)
+            //{
+            //    objSender.Appearance.FocusedCell.BackColor = Color.Blue;
+            //    objSender.Appearance.FocusedCell.ForeColor = Color.White;
+                
+            //}
+            //else
+            //{
+                
+            //    objSender.Appearance.FocusedCell.BackColor = Color.Transparent;
+            //    objSender.Appearance.FocusedCell.ForeColor = Color.Transparent;
+            //}
+            
+            
         }
     }
 }
