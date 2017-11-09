@@ -99,7 +99,7 @@ namespace DXListView
             treeList1.OptionsView.ShowSummaryFooter = true;
             TreeListColumn column = treeList1.Columns[1];
             column.AllNodesSummary = true;
-            column.SummaryFooterStrFormat = "Ticket Total  {0:0.00}";
+            column.SummaryFooterStrFormat = "Total  {0:0.00}";
             column.SummaryFooter = SummaryItemType.Sum;
 
             
