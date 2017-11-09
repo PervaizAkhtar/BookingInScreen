@@ -95,6 +95,7 @@
             this.treeList1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeList1.Location = new System.Drawing.Point(433, 60);
             this.treeList1.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.treeList1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.treeList1.LookAndFeel.TouchUI = true;
             this.treeList1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.treeList1.Margin = new System.Windows.Forms.Padding(6);

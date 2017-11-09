@@ -32,7 +32,7 @@ public class DevExpressTreeListManager
         col1.VisibleIndex = 0;
         col1.MinWidth = 240;
         col1.Width = 240;
-        
+        col1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;  
         
 
         TreeListColumn col2 = tl.Columns.Add();
@@ -43,7 +43,7 @@ public class DevExpressTreeListManager
         col2.OptionsColumn.AllowSort = false;
         col2.OptionsColumn.AllowMoveToCustomizationForm = false;
         col2.OptionsColumn.AllowMove = false;
-        
+        col2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
         
 
         tl.EndUpdate();

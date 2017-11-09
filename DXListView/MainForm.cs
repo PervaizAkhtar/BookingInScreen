@@ -93,6 +93,7 @@ namespace DXListView
             treeList1.OptionsView.ShowVertLines = false;
             treeList1.OptionsView.ShowHorzLines = false;
             treeList1.OptionsView.ShowColumns = false;
+    
         }
 
         private void btnVOID_Click(object sender, EventArgs e)
