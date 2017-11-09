@@ -95,6 +95,14 @@ namespace DXListView
             treeList1.OptionsView.ShowHorzLines = false;
             treeList1.OptionsView.ShowColumns = false;
 
+
+            treeList1.OptionsView.ShowSummaryFooter = true;
+            TreeListColumn column = treeList1.Columns[1];
+            column.AllNodesSummary = true;
+            column.SummaryFooterStrFormat = "Ticket Total  {0:0.00}";
+            column.SummaryFooter = SummaryItemType.Sum;
+
+            
             
         }
 
@@ -146,6 +154,8 @@ namespace DXListView
             panelPlu.Visible = true;
             panelColor.Visible = false;
             panelFabric.Visible = false;
+            var sum = treeList1.Columns[1];
+            
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -157,22 +167,6 @@ namespace DXListView
         private void button7_Click(object sender, EventArgs e)
         {
             lblQty.Text = "Qty: 1";
-        }
-
-        private void button21_Click(object sender, EventArgs e)
-        {
-            treeList1.OptionsView.ShowIndicator = true;
-            treeList1.OptionsView.ShowVertLines = true;
-            treeList1.OptionsView.ShowHorzLines = true;
-            treeList1.OptionsView.ShowColumns = false;
-        }
-
-        private void button22_Click(object sender, EventArgs e)
-        {
-            treeList1.OptionsView.ShowIndicator = false;
-            treeList1.OptionsView.ShowVertLines = false;
-            treeList1.OptionsView.ShowHorzLines = false;
-            treeList1.OptionsView.ShowColumns = false;
         }
 
 
@@ -193,7 +187,11 @@ namespace DXListView
         {
             Qty = 1;
             treeList1.Nodes.Clear();
-            
+            NodeCustomerAccNo = mgr.CreateRootNodeWithCustomerAccountNumber(CustomerAccNo);
+
+            panelPlu.Visible = true;
+            panelFabric.Visible = false;
+            panelColor.Visible = false;
         }
     }
 }

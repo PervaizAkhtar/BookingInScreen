@@ -61,7 +61,6 @@
             this.panelPlu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.lblTicketTotal = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nORTHWINDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
@@ -96,14 +95,14 @@
             this.treeList1.BackgroundImage = global::DXListView.Properties.Resources.Customers_Ticket;
             this.treeList1.CausesValidation = false;
             this.treeList1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeList1.Location = new System.Drawing.Point(433, 60);
+            this.treeList1.Location = new System.Drawing.Point(433, 39);
             this.treeList1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.treeList1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.treeList1.LookAndFeel.TouchUI = true;
             this.treeList1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.treeList1.Margin = new System.Windows.Forms.Padding(6);
             this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(356, 514);
+            this.treeList1.Size = new System.Drawing.Size(356, 535);
             this.treeList1.TabIndex = 0;
             this.treeList1.VertScrollVisibility = DevExpress.XtraTreeList.ScrollVisibility.Never;
             this.treeList1.AfterExpand += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterExpand);
@@ -425,18 +424,6 @@
             this.button8.Text = "NEXT ITEM";
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // lblTicketTotal
-            // 
-            this.lblTicketTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTicketTotal.Font = new System.Drawing.Font("Courier New", 11.5F);
-            this.lblTicketTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTicketTotal.Location = new System.Drawing.Point(702, 36);
-            this.lblTicketTotal.Name = "lblTicketTotal";
-            this.lblTicketTotal.Size = new System.Drawing.Size(86, 24);
-            this.lblTicketTotal.TabIndex = 96;
-            this.lblTicketTotal.Text = "Total";
-            this.lblTicketTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // button21
             // 
             this.button21.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -457,7 +444,6 @@
             this.ClientSize = new System.Drawing.Size(800, 623);
             this.ControlBox = false;
             this.Controls.Add(this.button21);
-            this.Controls.Add(this.lblTicketTotal);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelPlu);
@@ -518,7 +504,6 @@
         private System.Windows.Forms.Panel panelPlu;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Button button8;
-        internal System.Windows.Forms.Label lblTicketTotal;
         internal System.Windows.Forms.Button button21;
     }
 }
