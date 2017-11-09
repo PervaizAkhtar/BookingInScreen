@@ -448,6 +448,7 @@
             this.button22.Size = new System.Drawing.Size(74, 48);
             this.button22.TabIndex = 98;
             this.button22.Text = "REMOVE INDEX";
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -459,6 +460,7 @@
             this.button23.Size = new System.Drawing.Size(74, 48);
             this.button23.TabIndex = 99;
             this.button23.Text = "REMOVE LAST";
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // MainForm
             // 

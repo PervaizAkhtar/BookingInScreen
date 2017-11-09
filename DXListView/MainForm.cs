@@ -155,7 +155,6 @@ namespace DXListView
             panelColor.Visible = false;
             panelFabric.Visible = false;
             var sum = treeList1.Columns[1];
-            
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -169,19 +168,15 @@ namespace DXListView
             lblQty.Text = "Qty: 1";
         }
 
-
         private void treeList1_AfterExpand(object sender, NodeEventArgs e)
         {
             e.Node.StateImageIndex = 0;
-
         }
 
         private void treeList1_AfterCollapse(object sender, NodeEventArgs e)
         {
             e.Node.StateImageIndex = 1;
-
         }
-
 
         private void button21_Click_1(object sender, EventArgs e)
         {
@@ -192,6 +187,70 @@ namespace DXListView
             panelPlu.Visible = true;
             panelFabric.Visible = false;
             panelColor.Visible = false;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TreeListNode node = treeList1.FocusedNode;
+                if (node == null)
+                {
+                    MessageBox.Show("Select item from plu list and then press remove button.");
+                }
+                else
+                {
+                    if (node.Id == 0)
+                    {
+
+                    }
+                    else
+                    {
+                        if (node.ParentNode != null)
+                            node.ParentNode.Nodes.Remove(node);
+                        else
+                            treeList1.Nodes.Remove(node);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                treeList1.EndUpdate();
+                panelPlu.Visible = true;
+                panelFabric.Visible = false;
+                panelColor.Visible = false;
+            }
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int indexItem = treeList1.Nodes.Count - 1;
+
+                if (indexItem == 0)
+                { 
+                }
+                else 
+                {
+                    treeList1.Nodes.RemoveAt(indexItem);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                treeList1.EndUpdate();
+                panelPlu.Visible = true;
+                panelFabric.Visible = false;
+                panelColor.Visible = false;
+            }
         }
     }
 }
