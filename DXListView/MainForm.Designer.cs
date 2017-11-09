@@ -102,6 +102,7 @@
             this.treeList1.Name = "treeList1";
             this.treeList1.Size = new System.Drawing.Size(356, 514);
             this.treeList1.TabIndex = 0;
+            this.treeList1.VertScrollVisibility = DevExpress.XtraTreeList.ScrollVisibility.Never;
             this.treeList1.AfterExpand += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterExpand);
             this.treeList1.AfterCollapse += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterCollapse);
             // 
