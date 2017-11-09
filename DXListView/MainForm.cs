@@ -86,6 +86,13 @@ namespace DXListView
             // TODO: This line of code loads data into the 'nORTHWINDDataSet.Orders' table. You can move, or remove it, as needed.
             this.ordersTableAdapter.Fill(this.nORTHWINDDataSet.Orders);
             NodeCustomerAccNo = mgr.CreateRootNodeWithCustomerAccountNumber(CustomerAccNo);
+
+            treeList1.OptionsBehavior.Editable = false;
+
+            treeList1.OptionsView.ShowIndicator = false;
+            treeList1.OptionsView.ShowVertLines = false;
+            treeList1.OptionsView.ShowHorzLines = false;
+            treeList1.OptionsView.ShowColumns = false;
         }
 
         private void btnVOID_Click(object sender, EventArgs e)
@@ -155,6 +162,22 @@ namespace DXListView
         private void button7_Click(object sender, EventArgs e)
         {
             lblQty.Text = "Qty: 1";
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            treeList1.OptionsView.ShowIndicator = true;
+            treeList1.OptionsView.ShowVertLines = true;
+            treeList1.OptionsView.ShowHorzLines = true;
+            treeList1.OptionsView.ShowColumns = false;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            treeList1.OptionsView.ShowIndicator = false;
+            treeList1.OptionsView.ShowVertLines = false;
+            treeList1.OptionsView.ShowHorzLines = false;
+            treeList1.OptionsView.ShowColumns = false;
         }
     }
 }

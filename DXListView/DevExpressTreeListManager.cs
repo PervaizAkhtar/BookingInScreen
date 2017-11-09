@@ -33,8 +33,7 @@ public class DevExpressTreeListManager
         col1.MinWidth = 240;
         col1.Width = 240;
         
-        //col1.AppearanceHeader.BackColor = Color.White;
-        //col1.AppearanceCell.BackColor = Color.White;
+        
 
         TreeListColumn col2 = tl.Columns.Add();
         col2.Caption = "";
@@ -45,8 +44,7 @@ public class DevExpressTreeListManager
         col2.OptionsColumn.AllowMoveToCustomizationForm = false;
         col2.OptionsColumn.AllowMove = false;
         
-        //col2.AppearanceHeader.BackColor = Color.White;
-        //col2.AppearanceCell.BackColor = Color.White;
+        
 
         tl.EndUpdate();
     }
@@ -59,6 +57,7 @@ public class DevExpressTreeListManager
         TreeListNode nodeCustomerAccNo = tl.AppendNode(
            new object[] { customerAccNo, "" }, parentForRootNodes);
 
+        
         return nodeCustomerAccNo;
     }
 
