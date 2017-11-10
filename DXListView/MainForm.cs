@@ -19,7 +19,6 @@ namespace DXBookingIn
     {
         public DevExpressTreeListManager mgr;
         public string CustomerAccNo = "For MR Z ERO";
-        public int Qty = 1;
         public TreeListNode NodePlu = null;
         public TreeListNode NodeCustomerAccNo = null;
         public string FolderPath = System.Configuration.ConfigurationManager.AppSettings["FolderPath"];
@@ -113,6 +112,10 @@ namespace DXBookingIn
 
         private void AddPluToTree(string pluText, string pluPrice)
         {
+            string[] temp = lblQty.Text.ToString().Split(':');
+
+            int Qty = int.Parse(temp[1].Trim());
+
             pluText = Qty + " x " + pluText;
 
             decimal   price = decimal.Parse(pluPrice.ToString());
@@ -128,6 +131,8 @@ namespace DXBookingIn
             panelPlu.Visible = false;
 
             panelColor.Visible = true;
+            
+            lblQty.Text = "Qty: 1";
         }
 
         public void AddPLUExtraToTree(string pluExtraText, string pluExtraPrice)
@@ -163,7 +168,6 @@ namespace DXBookingIn
         private void btn3_Click(object sender, EventArgs e)
         {
             lblQty.Text = "Qty: 2";
-            Qty = 2;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -183,7 +187,9 @@ namespace DXBookingIn
 
         private void button21_Click_1(object sender, EventArgs e)
         {
-            Qty = 1;
+            string[] temp = lblQty.Text.ToString().Split(':');
+            int Qty = int.Parse(temp[1].Trim());
+
             treeList1.Nodes.Clear();
             NodeCustomerAccNo = mgr.CreateRootNodeWithCustomerAccountNumber(CustomerAccNo);
 
