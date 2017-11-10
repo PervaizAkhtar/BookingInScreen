@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXListView", "DXListView\DXListView.csproj", "{C3D2747C-91C3-4456-9285-3557934BD7BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXBookingIn", "DXListView\DXBookingIn.csproj", "{C3D2747C-91C3-4456-9285-3557934BD7BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

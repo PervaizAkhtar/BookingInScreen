@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace DXListView {
+namespace DXBookingIn {
     
     
     /// <summary>
@@ -1638,7 +1638,7 @@ namespace DXListView {
         }
     }
 }
-namespace DXListView.NORTHWINDDataSetTableAdapters {
+namespace DXBookingIn.NORTHWINDDataSetTableAdapters {
     
     
     /// <summary>
@@ -1810,7 +1810,7 @@ SELECT OrderID, ProductID, UnitPrice, Quantity, Discount FROM [Order Details] WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DXListView.Properties.Settings.Default.NORTHWINDConnectionString;
+            this._connection.ConnectionString = global::DXBookingIn.Properties.Settings.Default.NORTHWINDConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2228,7 +2228,7 @@ SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate, ShippedDate, Sh
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DXListView.Properties.Settings.Default.NORTHWINDConnectionString;
+            this._connection.ConnectionString = global::DXBookingIn.Properties.Settings.Default.NORTHWINDConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

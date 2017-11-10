@@ -1,4 +1,4 @@
-﻿namespace DXListView
+﻿namespace DXBookingIn
 {
     partial class MainForm
     {

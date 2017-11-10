@@ -1,4 +1,4 @@
-﻿namespace DXListView
+﻿namespace DXBookingIn
 {
     partial class Form1
     {
@@ -49,9 +49,9 @@
             // 
             this.treeList1.Appearance.TreeLine.BackColor = System.Drawing.Color.Red;
             this.treeList1.Appearance.TreeLine.Options.UseBackColor = true;
-            this.treeList1.AppearancePrint.Row.Image = global::DXListView.Properties.Resources.Customers_Ticket;
+            this.treeList1.AppearancePrint.Row.Image = global::DXBookingIn.Properties.Resources.Customers_Ticket;
             this.treeList1.AppearancePrint.Row.Options.UseImage = true;
-            this.treeList1.BackgroundImage = global::DXListView.Properties.Resources.Customers_Ticket;
+            this.treeList1.BackgroundImage = global::DXBookingIn.Properties.Resources.Customers_Ticket;
             this.treeList1.BestFitVisibleOnly = true;
             this.treeList1.Location = new System.Drawing.Point(432, 12);
             this.treeList1.Name = "treeList1";

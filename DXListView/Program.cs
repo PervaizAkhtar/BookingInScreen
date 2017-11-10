@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
 
-namespace DXListView
+namespace DXBookingIn
 {
     static class Program
     {

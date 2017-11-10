@@ -8,8 +8,8 @@
     <ProjectGuid>{C3D2747C-91C3-4456-9285-3557934BD7BC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DXListView</RootNamespace>
-    <AssemblyName>DXListView</AssemblyName>
+    <RootNamespace>DXBookingIn</RootNamespace>
+    <AssemblyName>DXBookingIn</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
