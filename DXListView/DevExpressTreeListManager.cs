@@ -71,9 +71,9 @@ public class DevExpressTreeListManager
         return nodePLU;
     }
 
-    public TreeListNode CreatePLUNodeExtra(TreeListNode nodePLU, string pluExtraDescription, decimal pluExtraPrice)
+    public TreeListNode CreatePLUNodeExtra(TreeListNode nodePLU, string pluExtraDescription, decimal? pluExtraPrice)
     {
-        TreeListNode nodePluExtra = tl.AppendNode(new object[] { pluExtraDescription,pluExtraPrice }, nodePLU);
+        TreeListNode nodePluExtra = tl.AppendNode(new object[] { pluExtraDescription,(pluExtraPrice==null)? "" : pluExtraPrice.Value.ToString()  }, nodePLU);
 
         //tl.AppendNode("", nodePLU);
 

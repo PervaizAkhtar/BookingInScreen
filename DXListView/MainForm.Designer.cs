@@ -310,7 +310,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(96, 48);
             this.button15.TabIndex = 87;
-            this.button15.Tag = "1.30";
+            this.button15.Tag = "";
             this.button15.Text = "Interlined";
             // 
             // button16
@@ -321,7 +321,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(96, 48);
             this.button16.TabIndex = 86;
-            this.button16.Tag = "2.50";
+            this.button16.Tag = "";
             this.button16.Text = "Voucher";
             // 
             // button17

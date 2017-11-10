@@ -132,7 +132,12 @@ namespace DXListView
 
         public void AddPLUExtraToTree(string pluExtraText, string pluExtraPrice)
         {
-            decimal price = decimal.Parse(pluExtraPrice.ToString());
+            decimal? price = null;
+
+            if(!string.IsNullOrEmpty(pluExtraPrice))
+            {
+                price = decimal.Parse(pluExtraPrice.ToString());
+            }
 
             mgr.CreatePLUNodeExtra(NodePlu, pluExtraText, price);
 
