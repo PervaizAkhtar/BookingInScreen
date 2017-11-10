@@ -89,8 +89,15 @@
             this.treeList1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.White;
             this.treeList1.Appearance.FocusedCell.Options.UseBackColor = true;
             this.treeList1.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.treeList1.Appearance.FooterPanel.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeList1.Appearance.FooterPanel.Options.UseFont = true;
+            this.treeList1.Appearance.FooterPanel.Options.UseTextOptions = true;
+            this.treeList1.Appearance.FooterPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.treeList1.Appearance.GroupFooter.Font = new System.Drawing.Font("Papyrus", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeList1.Appearance.GroupFooter.Options.UseFont = true;
             this.treeList1.Appearance.Row.Font = new System.Drawing.Font("Courier New", 11.5F);
             this.treeList1.Appearance.Row.Options.UseFont = true;
+            this.treeList1.FixedLineWidth = 1;
             this.treeList1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeList1.Location = new System.Drawing.Point(433, 39);
             this.treeList1.LookAndFeel.SkinName = "Office 2010 Blue";
@@ -99,6 +106,7 @@
             this.treeList1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.treeList1.Margin = new System.Windows.Forms.Padding(6);
             this.treeList1.Name = "treeList1";
+            this.treeList1.OptionsPrint.UsePrintStyles = false;
             this.treeList1.Size = new System.Drawing.Size(356, 535);
             this.treeList1.StateImageList = this.imageList1;
             this.treeList1.TabIndex = 0;
@@ -580,7 +588,7 @@
             this.Name = "MainForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booking In Screen";
+            this.Text = "New Booking In Screen  Feasibility Test ";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             this.panelColor.ResumeLayout(false);
