@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Configuration;
 namespace DXListView
 {
     public partial class MainForm : Form
@@ -22,7 +22,7 @@ namespace DXListView
         public int Qty = 1;
         public TreeListNode NodePlu = null;
         public TreeListNode NodeCustomerAccNo = null;
-
+        public string FolderPath = System.Configuration.ConfigurationManager.AppSettings["FolderPath"];
         public MainForm()
         {
             InitializeComponent();
@@ -84,8 +84,6 @@ namespace DXListView
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'nORTHWINDDataSet.Orders' table. You can move, or remove it, as needed.
-            this.ordersTableAdapter.Fill(this.nORTHWINDDataSet.Orders);
             NodeCustomerAccNo = mgr.CreateRootNodeWithCustomerAccountNumber(CustomerAccNo);
 
             treeList1.OptionsBehavior.Editable = false;
@@ -251,6 +249,58 @@ namespace DXListView
                 panelFabric.Visible = false;
                 panelColor.Visible = false;
             }
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            treeList1.Print();
+        }
+
+        private void CreateFolder()
+        {
+
+            if (System.IO.Directory.Exists(FolderPath))
+            {
+
+            }
+            else {
+                System.IO.Directory.CreateDirectory(FolderPath);
+            }
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            CreateFolder();
+            string timeStamp = DateTime.Now.ToString("dd-MM-yyy HHmmss");
+            treeList1.ExportToPdf(FolderPath + @"\Ticket_" + timeStamp + ".pdf");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            CreateFolder();
+            string timeStamp = DateTime.Now.ToString("dd-MM-yyy HHmmss");
+            treeList1.ExportToRtf(FolderPath + @"\Ticket_" + timeStamp + ".rtf");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            CreateFolder();
+            string timeStamp = DateTime.Now.ToString("dd-MM-yyy HHmmss");
+            treeList1.ExportToCsv(FolderPath + @"\Ticket_" + timeStamp + ".csv");
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            CreateFolder();
+            string timeStamp = DateTime.Now.ToString("dd-MM-yyy HHmmss");
+            treeList1.ExportToText(FolderPath + @"\Ticket_" + timeStamp + ".txt");
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            CreateFolder();
+            string timeStamp = DateTime.Now.ToString("dd-MM-yyy HHmmss");
+            treeList1.ExportToXls(FolderPath + @"\Ticket_" + timeStamp + ".xls");
         }
     }
 }
