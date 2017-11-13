@@ -70,6 +70,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelPrint = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.button24 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
             this.panelColor.SuspendLayout();
             this.panelFabric.SuspendLayout();
@@ -113,6 +114,7 @@
             this.treeList1.VertScrollVisibility = DevExpress.XtraTreeList.ScrollVisibility.Never;
             this.treeList1.AfterExpand += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterExpand);
             this.treeList1.AfterCollapse += new DevExpress.XtraTreeList.NodeEventHandler(this.treeList1_AfterCollapse);
+            this.treeList1.DoubleClick += new System.EventHandler(this.treeList1_DoubleClick);
             // 
             // imageList1
             // 
@@ -418,9 +420,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(436, 13);
+            this.label1.Location = new System.Drawing.Point(410, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 24);
+            this.label1.Size = new System.Drawing.Size(219, 24);
             this.label1.TabIndex = 94;
             this.label1.Text = "Acc : 0  - MR Z ERO - zero limited1";
             // 
@@ -562,6 +564,18 @@
             this.label2.TabIndex = 112;
             this.label2.Text = "File Export Path {  C:\\Export\\  }";
             // 
+            // button24
+            // 
+            this.button24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button24.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Location = new System.Drawing.Point(635, 1);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(74, 37);
+            this.button24.TabIndex = 113;
+            this.button24.Text = "EDIT";
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,6 +583,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(225)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(800, 623);
             this.ControlBox = false;
+            this.Controls.Add(this.button24);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
@@ -648,5 +663,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panelPrint;
         private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Button button24;
     }
 }

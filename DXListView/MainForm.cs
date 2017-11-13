@@ -96,7 +96,7 @@ namespace DXBookingIn
             treeList1.OptionsView.ShowSummaryFooter = true;
             TreeListColumn column = treeList1.Columns[1];
             column.AllNodesSummary = true;
-            column.SummaryFooterStrFormat = "Total  {0:0.00}";
+            column.SummaryFooterStrFormat = "{0:0.00}";
             column.SummaryFooter = SummaryItemType.Sum;
 
             
@@ -312,6 +312,65 @@ namespace DXBookingIn
             CreateFolder();
             string timeStamp = DateTime.Now.ToString("dd-MM-yyy HHmmss");
             treeList1.ExportToXls(FolderPath + @"\Ticket_" + timeStamp + ".xls");
+        }
+
+        public void Eidt()
+        {
+            TreeListNode node = treeList1.FocusedNode;
+            if (node == null || node.Id == 0)
+            {
+                MessageBox.Show("Select Plu item to EDIT", "New Booking In Screen");
+            }
+            else
+            {
+                frmEdit frm = new frmEdit();
+                var col1 = node.GetValue(0);
+                string[] temp = col1.ToString().Split('x');
+                var col2 = node.GetValue(1);
+                if (temp.Count() > 1)
+                {
+                    frm.txtQuantity.Enabled = true;
+                    frm.txtQuantity.Text = temp[0].Trim();
+                    frm.txtDescription.Text = temp[1].Trim();
+                    frm.txtPrice.Text = col2.ToString().Trim();
+                    frm.ShowDialog();
+
+                    if (frm.Void == false)
+                    {
+                        string line1 = frm.Qty.ToString() + " x " + frm.Description;
+                        string line2 = frm.Price.ToString();
+                        node.SetValue(0, line1);
+                        node.SetValue(1, line2);
+                        treeList1.ExpandAll();
+                    }
+                }
+                else
+                {
+                    frm.txtQuantity.Enabled = false;
+                    frm.txtDescription.Text = temp[0];
+                    frm.txtPrice.Text = col2.ToString();
+                    frm.ShowDialog();
+
+                    if (frm.Void == false)
+                    {
+                        string line1 = frm.Description;
+                        string line2 = frm.Price.ToString();
+                        node.SetValue(0, line1);
+                        node.SetValue(1, line2);
+                        treeList1.ExpandAll();
+                    }
+                }
+
+            }
+        }
+        private void button24_Click(object sender, EventArgs e)
+        {
+            Eidt();
+        }
+
+        private void treeList1_DoubleClick(object sender, EventArgs e)
+        {
+            Eidt();
         }
     }
 }
